@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="discription" content="ドットインストール詳細CSSフレックスボックス編">
+  <title>CSSフレックスボックス</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>CSSアニメーションの基本</h1>
+    <p>変化前と変化後のスタイルを作って、transition プロパティでその中間を補完する</p>
+  </header>
+  
+  <div class="container">
+    <main>
+      <h1>サンプル</h1>
+      <p>マウスオーバーすると丸になる</p>
+      <img src="../img/animation.png" width="300px">
+    </main>
+    <aside>
+      <div class="box name1"></div>
+    </aside>
+  </div>
+  
+  <h1>transformプロパティ</h1>
+  <div class="container">
+    <main>
+      <h1>translate</h1>
+      <p>
+        移動に使う。移動量を一緒に指定する。
+      </p>
+      <h4>translateX で x 方向</h4> 
+      <h4>translateY で y 方向</h4>
+      <h4>translate で xy 方向</h4>
+    </main>
+    <aside>
+        <div class="box name2"></div>
+        <div class="box name3"></div>
+        <div class="box name4"></div>
+    </aside>
+  </div>
+
+  <div class="container">
+    <main>
+      <h1>rotate</h1>
+      <p>
+        回転に使う。角度を一緒に指定する。<br>
+        変形元に  transform-origin: を指定すると始点を変更できる。
+      </p>
+      <h4>30度の回転。角度の単位はdeg</h4> 
+    </main>
+    <aside>
+        <div class="box name5"></div>
+    </aside>
+  </div>
+
+  <div class="container">
+    <main>
+      <h1>scale</h1>
+      <p>
+        リサイズに使う。移動量を一緒に指定する。<br>
+        変形元に  transform-origin: を指定すると始点を変更できる。
+      </p>
+      <h4>scaleX で x 方向</h4> 
+      <h4>scaleY で y 方向</h4>
+      <h4>scale で xy 方向</h4>
+    </main>
+    <aside>
+        <div class="box name6"></div>
+        <div class="box name7"></div>
+        <div class="box name8"></div>
+    </aside>
+  </div>
+
+
+  <div class="container">
+    <main>
+      <h1>複数指定時の注意</h1>
+      <p>
+        複数の変形を同時に指定することもできますが、順番に注意が必要。<br>
+        たとえば、rotate(-30deg) 、translateX(-100px) とすると 30 度回転した後に、座標軸が回転したまま右方向に 100px 移動する。
+      </p>
+      <h4>rotate(-30deg) 、translateX(-100px)</h4> 
+      <h4>translateX(-100px)、rotate(-30deg) </h4> 
+    </main>
+    <aside>
+        <div class="box name9"></div>
+        <div class="box name10"></div>
+    </aside>
+  </div>
+</body>
+</html>

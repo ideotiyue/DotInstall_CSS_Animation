@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sytle.css">
+  <title>CSSアニメーション</title>
+</head>
+<body>
+  <script>
+  // クロームのバグ回避
+  </script>
+  <header>
+    <h1>transition-property</h1>
+    <p>transition-propertyとChromeのバグの回避方法</p>
+  </header>
+
+  <h2>transition-property</h2>
+  <div class="container">
+   <nav>
+    <div class="box name1"></div>
+   </nav>
+   <main>
+    どのプロパティをトランジションの対象にするかを指定する<br>
+    全てのプロパティを transition の対象にしたい場合は all としてあげても OK<br>
+    アニメーションさせたくないものまでアニメーションしてしまうこともあるので、明示的にプロパティを指定したほうが良い
+    
+   </main>
+    <img src="../img/transtionproperty.png" width="600px">
+  </div>
+
+  <h2>Chromeのバグの回避方法</h2>
+  <p>
+    なんらかのスクリプトを読み込めば OK<br>
+    script タグの間に半角空白を入れるだけでもOK
+  </p>
+  
+  <h2>transition-delay</h2>
+  <div class="container">
+    <nav>
+      <div class="box name2"></div>
+    </nav>
+    <main>
+      アニメーションが開始するまでの時間を設定できる。
+    </main>
+    <img src="../img/delay.png" width="600px">
+  </div>
+  
+  <h2>transition-duration</h2>
+  <div class="container">
+    <nav>
+      <div class="box name3"></div>
+    </nav>
+    <main>
+      アニメーションが開始するまでの時間を設定できる。<br>
+      UI では大体 0.3 秒くらいが小気味良い速度と言われています。<br>
+      単位指定の0は省略できます。
+    </main>
+    <img src="../img/duration.png" width="600px">
+  </div>
+  
+  <h2>transition-timing-function</h2>
+  <p>
+    アニメーションの速度に緩急をつける
+  </p>
+  <img src="../img/transition-timing-function.png" width="600px">
+  
+  <h2>デベロッパーツールで動きを自作する</h2>
+  <div class="container">
+    <nav>
+      <div class="box name4"></div>
+    </nav>
+    <main>
+      アニメーションが開始するまでの時間を設定できる。
+    </main>
+    <img src="../img/cubic.png" width="600px">
+  </div>
+  
+  <h2>transitionの一括指定</h2>
+  <div class="container">
+    <nav>
+      <div class="box name5"></div>
+    </nav>
+    <main>
+      transition という一括指定プロパティを使ってあげれば OK。<br>
+      順不同かつ省略可で指定していくことができる。<br>
+      時間っぽい値をふたつ指定すると、最初のが duration 、次の値が delay の指定になる。<br>
+      複数のプロパティを変化させた場合はカンマ区切りで指定を書く。
+    </main>
+    <img src="../img/transition2.png" width="600px">
+  </div>
+</body>
+</html>

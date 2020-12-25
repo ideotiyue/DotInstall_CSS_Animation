@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sytle.css">
+  <title>CSSアニメーション</title>
+</head>
+<body>
+  <header>
+    <h1>実践でよく使うアニメーションパーツ</h1>
+    <p>
+      色が変わるボタン、ローディングアイコン、ポップアップなど</p>
+  </header>
+
+  <h2>ふわっと色が変わるボタン</h2>
+  <div class="container">
+   <nav>
+     <span class="btn">OK!</span>
+   </nav>
+   <main>
+    transitionでbackgroundに0.3秒つけている。
+   </main>
+    <img src="../img/animationbtn.png" width="600px">
+  </div>
+
+  <h2>ローディングアイコン</h2>
+  <div class="container">
+    <nav>
+     <div class="loading"></div>
+   </nav>
+   <main>
+     Cの状態の円を回転させるアニメーション。<br>
+     正方形にborderをつけ、border-right-color のみ<br> transparent（ボーダーの色を透明にする指定）にしている。<br>
+     @keyflamesの0% と 100% は from 、 to と書いてあげても OK
+   </main>
+    <img src="../img/animationbtn.png" width="600px">
+  </div>
+
+  <h2>ポップアップ</h2>
+  <div class="container">
+    <nav>
+      ※右下に出ます
+    </nav>
+    <main>
+      最初に少し下のほうに配置しておいて、そこからスッと上に出てきて<br>
+      ちょっととどまった後に下にスッと消えていくような動き<br>
+      先に表示するポップアップをつくってアニメを付けます<br>
+      下から上でとどまって下にいくのですが、最後に上に戻ってくるのでforwardsを設定します。<br>
+      @keyflameで同じ設定が並ぶ時はカンマ区切りで指定することもできる。  <br>
+      最初にパッと出てくるような動きは animation-timing-function を ease-out にしておくと良い。<br>
+      
+    </main>
+    <img src="../img/popup.png" width="600px">
+  </div>
+  <h3>ポップアップの注意事項</h3>
+  <p>
+    消えたメッセージはまだページ上に要素として残っているので、<br>
+    何も設定しないとその下にボタンなどがあるとクリックできなくなる。<br>
+    メッセージが消えたあと、マウスのイベントに反応しないように<br>
+    pointer events というプロパティで、 ポップアップのkeyflameで100% の地点で pointer-events: none としてあげれば、<br>
+    マウスのイベントに反応しなくなる。その下のボタンがクリックできるようになる
+  </p>
+  <button>click me!</button>
+  <div class="message">Hello!</div>
+</body>
+</html>

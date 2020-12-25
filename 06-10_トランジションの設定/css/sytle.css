@@ -1,0 +1,70 @@
+.container{
+  display: flex;
+}
+nav {
+  background-color: hsl(10, 50%, 90%);
+  width: 200px;
+  padding: 10px;
+  align-self: flex-center;
+}
+main {
+  background-color: lightpink;
+  flex: 1;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+.name1 {
+  /* transition-property: all; */
+  transition-property: transform, background;
+  transition-duration: 1s;
+}
+.name1:hover {
+  transform: translateX(30px);
+  background: skyblue;
+}
+
+.name2 {
+  /* transition-property: all; */
+  transition-property: transform, background;
+  transition-delay: 1s;
+}
+.name2:hover {
+  transform: translateX(30px);
+  background: skyblue;
+}
+
+.name3 {
+  /* transition-property: all; */
+  transition-property: transform, background;
+  transition-duration: .3s;
+}
+.name3:hover {
+  transform: translateX(30px);
+  background: skyblue;
+}
+
+.name4 {
+  transition-property: transform, background;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(0.52, 0.68, 0.79, 1.58);
+}
+.name4:hover {
+  transform: translateX(30px);
+  background: skyblue;
+}
+
+.name5 {
+  /* transition-property: transform, background;
+  transition-duration: .3s;
+  transition-timing-function: ease-out;
+  transition-delay: 1s; */
+  transition: transform .3s ease-out 1s ,background .5s;
+}
+.name5:hover {
+  transform: translateX(30px);
+  background: skyblue;
+}

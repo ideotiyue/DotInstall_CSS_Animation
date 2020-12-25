@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sytle.css">
+  <title>CSSアニメーション</title>
+</head>
+<body>
+  <header>
+    <h1>animation</h1>
+    <p>
+      変化前、変化後だけではなくてその途中に好きなタイミングでキーとなるフレームを挟んで、<br>
+      そのキーフレームごとにスタイルを設定して、アニメーションさせていくことができるようになります。</p>
+    <img src="../img/animation2.png" width="600px">
+  </header>
+
+  <h2>@keyframesとanimation</h2>
+  <div class="container">
+   <nav>
+    <div class="box name1"></div>
+   </nav>
+   <main>
+    ①@keyframes として、好きな名前をつける。<br>
+    名前は英数字、ハイフン、アンダーバーを使って OK 。<br>
+    ｛｝の中にアニメーション開始から何パーセント経過したときにどうなるかを書く。<br>
+    0% の地点では変形前と同じスタイルなので、書かなくてもいいが、<br>
+    最初の状態を明示しておいても分かりやすいので、変形はしていないという意味で transform: none; とする<br>
+    ②適用したい要素にanimation-nameプロパティで @keyframes の名前をつけて呼び出す。
+   </main>
+    <img src="../img/animation3.png" width="600px">
+  </div>
+
+  <h2>animation-durationとanimation-delay</h2>
+  <div class="container">
+   <nav>
+    <div class="box name2"></div>
+   </nav>
+   <main>
+    animation-duration はアニメーションにかかる時間、animation-delay プロパティはアニメーションの開始時間を遅らせる。
+   </main>
+    <img src="../img/animation4.png" width="600px">
+  </div>
+
+  <h2>animation-fill-mode</h2>
+  <div class="container">
+   <nav>
+    <div class="box name3"></div>
+   </nav>
+   <main>
+    終わった後は、そのままの状態で居て欲しい場合、 animation-fill-mode というプロパティの値forwardsを使う
+   </main>
+    <img src="../img/animation5.png" width="600px">
+  </div>
+
+  <h2>animation-iteration-count</h2>
+  <div class="container">
+   <nav>
+    <div class="box name4"></div>
+   </nav>
+   <main>
+    何回繰り返すか指定する、nfinite にすると無限に繰り返し
+   </main>
+    <img src="../img/animation6.png" width="600px">
+  </div>
+
+  <h2>animation-iteration-count</h2>
+  <div class="container">
+   <nav>
+    <div class="box name5"></div>
+   </nav>
+   <main>
+    何回繰り返すか指定する、nfinite にすると無限に繰り返し
+   </main>
+    <img src="../img/animation6.png" width="600px">
+  </div>
+
+</body>
+</html>

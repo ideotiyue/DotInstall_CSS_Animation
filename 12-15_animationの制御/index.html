@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sytle.css">
+  <title>CSSアニメーション</title>
+</head>
+<body>
+  <header>
+    <h1>再生順の制御</h1>
+    <p>
+      アニメーションの逆再生、再生速度の制御など</p>
+  </header>
+
+  <h2>animation-direction</h2>
+  <h3>alternate</h3>
+  <div class="container">
+   <nav>
+    <div class="box name1"></div>
+   </nav>
+   <main>
+    折り返して再生
+   </main>
+    <img src="../img/alternate.png" width="600px">
+  </div>
+
+  <h3>reverse</h3>
+  <div class="container">
+   <nav>
+    <div class="box name2"></div>
+   </nav>
+   <main>
+    逆再生
+   </main>
+    <img src="../img/reverse.png" width="600px">
+  </div>
+
+  <h3>alternate-reverse</h3>
+  <div class="container">
+   <nav>
+    <div class="box name3"></div>
+   </nav>
+   <main>
+    折り返して逆再生
+   </main>
+    <img src="../img/alternate-revers.png" width="600px">
+  </div>
+
+  <h2>timing-function</h2>
+  <h3>linear</h3>
+  <div class="container">
+   <nav>
+    <div class="box name4"></div>
+   </nav>
+   <main>
+    スピードを一定に制御する。<br>
+    フレームごとに指定することも可能。
+   </main>
+    <img src="../img/alternate.png" width="600px">
+  </div>
+
+  <h2>animationの一括指定</h2>
+  <div class="container">
+    <nav>
+      <div class="box name5"></div>
+    </nav>
+    <main>
+      animationという一括指定プロパティを使ってあげれば OK。<br>
+      順不同かつ省略可で指定していくことができる。<br>
+      時間っぽい値をふたつ指定すると、最初のが duration 、次の値が delay の指定になる。<br>
+      複数のプロパティを変化させた場合はカンマ区切りで指定を書く。
+    </main>
+    <img src="../img/animation一括.png" width="600px">
+  </div>
+</body>
+</html>
